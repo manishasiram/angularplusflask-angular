@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      User name:
+      <input type="text" id="username" name="username">
+      password:
+      <input type="password" id="pwd" name="pwd">
+      <br><br>
+      <button class="btn btn-primary" (click)="sayHi()">Submit</button>
+    </div> -->
+    <div class="col-lg-4 col-lg-offset-4">
+      <form  #f="ngForm" >
+        
+          <div class="form-group">
+            <label for="tasks">Username</label>
+            <input type="text" 
+            id="username"
+            ngModel
+            class="form-control"
+            name="username" required>
+          </div>
+          <br>
+          <div class="form-group">
+              <label for="lname">email</label>
+              <input type="text" 
+              id="email" 
+              ngModel
+              class="form-control"
+              name="email" required>
+          </div>
+          <br>
+          <div>
+            
+            <div class="text-right">
+                <button class="btn btn-primary" (click)="onSubmit(f)" [disabled]="!f.valid" type="button">Submit</button>
+                &nbsp;&nbsp;<button class="btn btn-primary" (click)="onReset(f)" [disabled]="!f.valid" type="submit">Reset</button>
+                <button class="btn btn-primary" (click)="sayHi()">Submit</button>
+                <button class="btn btn-primary" (click)="login()">Login</button>
+              </div>
+          </div>  
+      </form>
+      </div>    
+  </div>
+</div> 
+
